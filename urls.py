@@ -3,4 +3,17 @@ url_dictionary = {'7-МИ 11-ТИ КИЛОМЕТЪР': 'https://www.imot.bg/pcgi
                   'БАНИШОРА': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5p88&f1=',
                   'БЕЛИТЕ БРЕЗИ': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5p9f&f1=',
                   'БЕНКОВСКИ': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5pal&f1=',
-                  'БОРОВО': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5pbm&f1='}
+                  'БОРОВО': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5pbm&f1=',
+                  'БОТУНЕЦ': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5rpq&f1=',
+                  'БОТУНЕЦ 2': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5rzw&f1=',
+                  'БОЯНА': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5s1n&f1=',
+                  'БЪКСТОН': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5s37&f1=',
+                  'ВИТОША': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5s5g&f1=',
+                  'ВОЕННА РАМПА': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5s76&f1=',
+                  'ВРАЖДЕБНА': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5saj&f1=',
+                  'ВРЪБНИЦА 1': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5sc3&f1=',
+                  'ВРЪБНИЦА 2': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5sf9&f1=',
+                  'ГЕВГЕЛИЙСКИ': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5shh&f1=',
+                  'ГЕО МИЛЕВ': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5siy&f1=',
+                  'ГОРНА БАНЯ': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5skl&f1=',
+                  'ГОРУБЛЯНЕ': 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6n5sm6&f1='}
