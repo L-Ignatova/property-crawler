@@ -16,4 +16,4 @@ Decoding cyrillic. Website's charset: 'windows-1251'. Resource that helped in th
 
 ## ToDo list
 - [ ] GUI checklist for choosing districts of interest
-- [ ] error handling
+- [x] error handling
