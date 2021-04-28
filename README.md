@@ -1,9 +1,9 @@
 # Web crawler 
 ## for real estate prices in Sofia districts
 
-Calculates average and mean property prices for Sofia districts (and shows the number of listed entries in each) in popular Bulgarian real estate website imot.bg
+Calculates average and mean property prices (w/ 2 & 3 rooms) for Sofia districts in popular Bulgarian real estate website imot.bg. Also shows the number of entries for each district.
 
-Currently the baseUrl is just a sample from the website. The website generates only up to 1,000 entries from chosen parameters so more url's to iterate through are needed for a bigger sample size for each district.
+Currently, the program iterates through the urls associated with about half of the districts from the website. The website generates only up to 1,000 entries from chosen parameters so the url corresponding to each district is needed for a bigger sample size.
 
 ### Languages
 Python 3.7
