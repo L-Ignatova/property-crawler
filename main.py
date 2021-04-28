@@ -4,9 +4,11 @@ import statistics
 import requests
 import csv
 import codecs
+from urls import url_dictionary
+
 
 startTime = datetime.now()
-baseUrl = 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6mbmpd&f1='
+
 
 def extract_properties(bodiesOnPage, list_so_far):
     for body in bodiesOnPage:
@@ -37,31 +39,34 @@ def find_pages(current_page, last_p, soup, real_estates):
         current_page += 1
     return real_estates
 
+for url in url_dictionary.values():
+    baseUrl = url
 
-curr_page = 1
-currUrl = baseUrl + str(curr_page)
-body_text = requests.get(currUrl, timeout=5, headers={"Accept-Language": "bg-BG, bg;q=0.5"})
-properties={}
-if body_text.status_code == 200:
-    soup = BeautifulSoup(body_text.content.decode('windows-1251'), 'lxml')
-    last_page = int(
-        soup.find('span', class_='pageNumbersInfo')
-            .text
-            .split(' ')[-1]
-    )
-    final_list_results = find_pages(curr_page, last_page, soup, properties)
-    with codecs.open('./properties.csv', 'w', encoding='utf-8-sig') as f:
-        csv_writer = csv.DictWriter(f, fieldnames=('region', 'num_of_entries', 'avg_p', 'mean_p'), lineterminator='\n')
-        csv_writer.writeheader()
-        for key, value in final_list_results.items():
-            csv_writer.writerow({
-                'region': key,
-                'num_of_entries': len(value),
-                'avg_p': str(int(sum(value) / len(value))),
-                'mean_p': str(int(statistics.median(value)))
-            })
-else:
-    print('404 error')
+    #baseUrl = 'https://www.imot.bg/pcgi/imot.cgi?act=3&slink=6mbmpd&f1='
+    curr_page = 1
+    currUrl = baseUrl + str(curr_page)
+    body_text = requests.get(currUrl, timeout=5, headers={"Accept-Language": "bg-BG, bg;q=0.5"})
+    properties={}
+    if body_text.status_code == 200:
+        soup = BeautifulSoup(body_text.content.decode('windows-1251'), 'lxml')
+        last_page = int(
+            soup.find('span', class_='pageNumbersInfo')
+                .text
+                .split(' ')[-1]
+        )
+        final_list_results = find_pages(curr_page, last_page, soup, properties)
+        with codecs.open('./properties.csv', 'w', encoding='utf-8-sig') as f:
+            csv_writer = csv.DictWriter(f, fieldnames=('region', 'num_of_entries', 'avg_p', 'mean_p'), lineterminator='\n')
+            csv_writer.writeheader()
+            for key, value in final_list_results.items():
+                csv_writer.writerow({
+                    'region': key,
+                    'num_of_entries': len(value),
+                    'avg_p': str(int(sum(value) / len(value))),
+                    'mean_p': str(int(statistics.median(value)))
+                })
+    else:
+        print('404 error')
 
 print(datetime.now() - startTime)
 
