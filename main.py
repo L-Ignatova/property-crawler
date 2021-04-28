@@ -65,7 +65,3 @@ else:
 
 print(datetime.now() - startTime)
 
-
-# link to russian help resource for decoding cyrillic:
-# website's charset was 'windows-1251'
-# https://overcoder.net/q/1334854/%D0%BA%D0%B0%D0%BA-%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C-html-%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%BD%D1%82-%D0%B2-%D0%BA%D0%BE%D0%B4%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B5-utf8
