@@ -42,7 +42,10 @@ checkboxes = {}
 
 
 def show():
-    checkbox_values = [checkboxes[obj].get() for obj in checkboxes.keys() if checkboxes[obj].get() != '0']
+    if all_var.get() == 1:
+        checkbox_values = [v for v in url_dictionary.values()]
+    else:
+        checkbox_values = [checkboxes[obj].get() for obj in checkboxes.keys() if checkboxes[obj].get() != '0']
     root.quit()
     show_def(checkbox_values)
 
@@ -62,7 +65,10 @@ my_canvas.bind('<Configure>', lambda e: my_canvas.configure(scrollregion=my_canv
 second_frame = Frame(my_canvas)
 my_canvas.create_window((0,0), window=second_frame, anchor='nw')
 
-
+all_var = IntVar()
+all_c = Checkbutton(second_frame,text='ALL',variable=all_var,height=1,width=40)
+all_c.deselect()
+all_c.pack()
 for index, (district, link) in enumerate(url_dictionary.items()):
     var = StringVar()
     c = Checkbutton(second_frame,text=district,variable=var,onvalue=link, offvalue='0',height=1,width=40)
